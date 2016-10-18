@@ -1,0 +1,93 @@
+<ion-view>
+  <ion-nav-title>
+    <div class="col-80 col-offset-10 padding-top padding-bottom">
+      <div class="button-bar film-type-bar">
+        <div class="button" ng-click="activeFilmType(1)" ng-class="{'active': data.filmType==1}">热映</div>
+        <div class="button" ng-click="activeFilmType(2)" ng-class="{'active': data.filmType==2}">待映</div>
+        <div class="button" ng-click="activeFilmType(3)" ng-class="{'active': data.filmType==3}">找片</div>
+      </div>
+    </div>
+  </ion-nav-title>
+  <ion-nav-buttons side="primary">
+    <button class="button button-clear icon-right ion-chevron-down my-bar-left" ng-click="">
+      城市
+    </button>
+  </ion-nav-buttons>
+  <div class="bar bar-my-subheader" style="padding-left: 50%; padding-top: 2px;">
+    <!-- <input type="text" name="" class="search-bar" placeholder="搜索电影或明星"> -->
+    <button class="search-bar" ng-click="openModal()">搜索电影或明星</button>
+  </div>
+  <ion-content class="has-my-bar">
+    <ion-slide-box class="slideH" 
+                   does-continue=true 
+                   auto-play=true 
+                   slide-interval=5000
+                   pager-click="sliderPagerClick(index)"
+                   delegate-handle="films-slide">
+      <ion-slide ng-repeat="item in data.topSlides">
+          <img ng-src="{{item.poster}}">
+      </ion-slide>
+    </ion-slide-box>
+
+    <div class="list film-list" ng-repeat="film in data.films">
+        <div class="item" ng-click="goDetail()">
+            <div class="inline-item item-img">
+              <img ng-src="{{film.poster}}">
+            </div>
+            <div class="inline-item item-content">
+              <div class="film-title" ng-bind="film.title"></div>
+              <div class="film-rate">
+                <span ng-if="film.audiRate">
+                  观众：<span class="rate" ng-bind="film.audiRate"></span>
+                </span>
+                <span ng-if="film.proRate">
+                  专业：<span class="rate" ng-bind="film.proRate"></span>
+                </span>
+              </div>
+              <div class="film-info">
+                <p ng-bind="film.infoDetail"></p>
+              </div>
+              <div class="film-playinfo">
+                <p>今天<span ng-bind="film.playinfo.theaterNum"></span>家影院放映<span ng-bind="film.playinfo.playNum"></span>场</p>
+              </div>
+            </div>
+            <div class="inline-item item-action">
+              <a class="button button-assertive button-outline button-positive">热映</a>
+            </div>
+        </div>
+    </div>
+  </ion-content>
+  <script type="text/ng-template" id="searchModal.html">
+    <ion-modal-view>
+      <ion-header-bar class="bar-assertive">
+        <input type="search" name="" class="search-bar vertical-middle" ng-model="searchKey" ng-change="search()" placeholder="搜索电影或明星">
+        <button class="button button-clear" ng-click="closeModal()" style="margin-left: auto;">取消</button>
+      </ion-header-bar>
+      <ion-content>
+        <!-- <div class="list film-list" ng-repeat="item in searchRes.film.list">
+          <div class="item">
+            <div class="inline-item item-img">
+              <img ng-src="{{film.poster}}">
+            </div>
+            <div class="inline-item item-content">
+              <div class="film-title" ng-bind="film.title"></div>
+              <div class="film-info">
+                <p ng-bind="film.infoDetail"></p>
+              </div>
+              <div class="film-playinfo">
+                <p></p>
+              </div>
+            </div>
+            <div class="inline-item">
+              
+            </div>
+          </div>
+        </div>
+        <div class="list theater-list" ng-repeat="item in searchRes.theater.list"></div>
+        <div class="list actor-list" ng-repeat="item in searchRes.actor.list"></div>
+        <div class="list article-list" ng-repeat="item in searchRes.article.list"></div> -->
+      </ion-content>
+    </ion-modal-view>
+  </script>
+</ion-view>
+

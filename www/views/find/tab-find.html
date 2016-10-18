@@ -1,0 +1,25 @@
+<ion-view>
+  <ion-nav-title style="line-height: 50px;">
+    发现
+  </ion-nav-title>
+  <div class="bar bar-my-subheader" style="padding-left: 50%; padding-top: 2px;">
+    <input type="text" name="" class="search-bar" placeholder="搜索电影或明星">
+  </div>
+  <ion-content class="has-my-bar">
+    <section class="Topics">
+      <div class="row">
+        <div class="col" ng-repeat="item in data.topicsOne">
+          <img class="topic-img" ng-src="{{ item.image }}" img-wh>
+          <label ng-bind="item.title"></label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col" ng-repeat="item in data.topicsTwo">
+          <img class="topic-img" ng-src="{{ item.image }}">
+          <label ng-bind="item.title"></label>
+        </div>
+      </div>
+    </section>
+    <section class="news"></section>
+  </ion-content>
+</ion-view>

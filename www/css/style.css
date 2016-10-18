@@ -1,0 +1,147 @@
+/* Empty. Add your own CSS if you like */
+html {
+	font-size: 16px;
+}
+img {
+	width: 100%;
+	height: 100%;
+}
+.r-b-round {
+	border-top-right-radius: .5rem; 
+	border-bottom-right-radius: .5rem;
+}
+.l-b-round {
+	border-top-left-radius: .5rem; 
+	border-bottom-left-radius: .5rem;
+}
+.vertical-middle {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.horizon-middle {
+	margin-left: auto;
+	margin-right: auto;
+}
+.m-r {
+	margin-right: 1rem;
+}
+.my-bar {
+	height: 50px;
+}
+.bar-assertive.my-bar {
+	background-image: linear-gradient(0deg, #ef473a, #ef473a 50%, transparent 50%);
+}
+.button-bar.film-type-bar {
+	height: 34px;
+	background-color: #e42112;
+    border-radius: 5px;
+}
+.film-type-bar .button {
+	margin: 2px;
+	background-color: #e42112;
+	border-radius: 5px;
+}
+.film-type-bar .button.active {
+	min-height: 30px;
+    height: 30px;
+    margin: 2px;
+	background-color: #fff;
+    color: #e42112;
+    border-radius: 4px;
+}
+.primary-buttons {
+	height: 34px;
+    margin-top: 5px;
+}
+.button.button-clear.my-bar-left {
+	font-size: 15px;
+}
+.button.button-clear.icon-right.my-bar-left:before, .button.button-clear.icon-left.my-bar-left:before {
+	font-size: 15px;
+	padding-left: 3px;
+    padding-top: 2px;
+}
+.has-my-bar {
+	top: 90px;
+}
+.bar-my-subheader {
+	top: 50px;
+	height: 40px;
+	background-color: #ef473a;
+	background-size: 0;
+}
+input.search-bar {
+	height: 30px;
+    width: 300px;
+    padding: 2px 2px 2px 12px;
+    /*margin-left: -150px;*/
+	border-radius: 20px;
+	/*text-align: center;*/
+}
+button.search-bar {
+	height: 30px;
+    width: 300px;
+    margin-left: -150px;
+    background-color: #fff;
+	border-radius: 20px;
+	border: 0;
+}
+.slideH {
+	height: 8rem;
+}
+.film-list {
+	margin-bottom: -1px;
+}
+.inline-item {
+	display: inline-block;
+}
+.item-img {
+	width: 5rem;
+	height: 6rem;
+}
+.item-img img {
+	width: 100%;
+	height: 100%;
+}
+.item-content {
+	width: 60%;
+	margin-top: -.5rem;
+	padding: .5rem;
+	padding-top: 0;
+	height: 7rem;
+	vertical-align: top;
+}
+	.item-content > div {
+		margin-bottom: 3px;
+	}
+	.item-content p {
+		font-size: 1rem;
+	}
+    .film-title {
+  	  line-height: 2rem;
+      font-size: 1.35rem;
+    }
+    .item-content > .film-title {
+    	margin-bottom: 0;
+    }
+    .item-content > .film-rate {
+  	  margin-bottom: 10px;
+    }
+	  	.rate {
+	  		font-size: 20px;
+	    	font-style: italic;
+	    	color: #FC9F4D;
+	    	margin-right: 5px;
+	  	}
+.item-action {
+	padding-top: 1.25rem;
+	vertical-align: top;
+}
+	.item-action .button {
+		min-height: 35px;
+    	height: 35px;
+    	line-height: 35px;
+	}
+.topic-img {
+	height: calc(width)
+}
