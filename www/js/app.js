@@ -43,7 +43,10 @@ define(['ionic-bundle'], function () {
     			// templateUrl: 'views/film/detail/filmdetail.html'
     			views: {
     				'tab-film': {
-    					templateUrl: 'views/film/detail/filmdetail.html'
+    					templateUrl: 'views/film/detail/filmdetail.html',
+    					controller: 'FilmDetailCtrl',
+						controllerAs: 'data',
+						resolve: load(['views/film/detail/filmdetail'])
     				}
     			}
 			})

@@ -15,9 +15,10 @@ define(['app'], function (app) {
 			poster: 'img/xiuchundao.jpg'
 		}];
 
-		$http.get('api/films.json').then(function (resp) {
-			vm.films = resp.data;
+		$http.get('http://localhost:3000/films/list').then(function (resp) {
+			vm.films = resp.data.data;
 		});
+		
 		$ionicModal.fromTemplateUrl('searchModal.html', {
 			scope: sp,
 			focusFirstInput: true
